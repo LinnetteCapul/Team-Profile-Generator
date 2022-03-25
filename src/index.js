@@ -33,10 +33,10 @@ function init() {
             }
         ])
         .then(({name, id, email, officeNumber}) => {
-            const manager = new Manager(id, name, email, officeNumber)
+            const manager = new Manager(name, id, email, officeNumber)
             teamMemberHtmlArr.push(generateManagerCard(manager))
-            mainMenu()
-        })
+            mainMenu();
+        });
     }
     function mainMenu() {
         inquirer.prompt([
@@ -59,6 +59,36 @@ function init() {
 
             })
     }
+    function engineerCreate() {
+        inquirer.prompt([
+            {
+                 type: 'input',
+                 name: 'name',
+                 message: 'What is the Engineer name?',
+                },
+                {
+                type: 'input',
+                name: 'id',
+                message: 'What is the Engineer id?',
+                },
+                {
+                 type: 'input',
+                 name: 'email',
+                 message: 'What is your email?',
+                },
+                {
+                 type: 'input',
+                 name: 'github',
+                 message: 'What is the Github username?',
+            }
+        ])
+        .then(({name, id, email, github}) => {
+            const engineer = new Engineer(name, id, email, github)
+            teamMemberHtmlArr.push(generateEngineerCard(engineer))
+            mainMenu();
+        });
+    }
+
     managerCreate()
 }
 init()
