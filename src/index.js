@@ -19,7 +19,7 @@ function init() {
                 {
                  type: 'input',
                  name: 'email',
-                 message: 'What is your email?',
+                 message: 'What is the Manager email?',
                 },
                 {
                  type: 'input',
@@ -33,8 +33,8 @@ function init() {
             }
         ])
         .then(({name, id, email, officeNumber}) => {
-            const manager = new Manager(name, id, email, officeNumber)
-            teamMemberHtmlArr.push(generateManagerCard(manager))
+            const manager = new Manager(name, id, email, officeNumber);
+            teamMemberHtmlArr.push(generateManagerCard(manager));
             mainMenu();
         });
     }
@@ -74,7 +74,7 @@ function init() {
                 {
                  type: 'input',
                  name: 'email',
-                 message: 'What is your email?',
+                 message: 'What is the Engineer email?',
                 },
                 {
                  type: 'input',
@@ -83,8 +83,37 @@ function init() {
             }
         ])
         .then(({name, id, email, github}) => {
-            const engineer = new Engineer(name, id, email, github)
-            teamMemberHtmlArr.push(generateEngineerCard(engineer))
+            const engineer = new Engineer(name, id, email, github);
+            teamMemberHtmlArr.push(generateEngineerCard(engineer));
+            mainMenu();
+        });
+    }
+    function internCreate() {
+        inquirer.prompt([
+            {
+                 type: 'input',
+                 name: 'name',
+                 message: 'What is the Intern name?',
+                },
+                {
+                type: 'input',
+                name: 'id',
+                message: 'What is the Intern id?',
+                },
+                {
+                 type: 'input',
+                 name: 'email',
+                 message: 'What is your email?',
+                },
+                {
+                 type: 'input',
+                 name: 'school',
+                 message: 'What school does the intern go to?',
+            }
+        ])
+        .then(({name, id, email, school}) => {
+            const intern = new Intern(name, id, email, school);
+            teamMemberHtmlArr.push(generateInternCard(intern));
             mainMenu();
         });
     }
