@@ -1,8 +1,8 @@
 const generateManagerCard = (manager) => {
     return `
-    <div class="card" style="width: 18rem;">
+    <div class="card text-white bg-success mb-3" style="width: 18rem;">
     <div class="card-body">
-      <h class="card-title">${manager.getName()}</h5>
+      <h class="card-title"><strong>${manager.getName()}</strong></h5>
       <p class="card-text"><i class="fa-solid fa-mug-hot"></i>${manager.getRole()}</p>
     </div>
     <ul class="list-group list-group-flush">
@@ -16,9 +16,9 @@ const generateManagerCard = (manager) => {
 
 const generateEngineerCard = (engineer) => {
     return `
-    <div class="card" style="width: 18rem;">
+    <div class="card text-white bg-success mb-3" style="width: 18rem;">
     <div class="card-body">
-      <h class="card-title">${engineer.getName()}</h5>
+      <h class="card-title"><strong>${engineer.getName()}</strong></h5>
       <p class="card-text"><i class="fa-solid fa-glasses"></i>${engineer.getRole()}</p>
     </div>
     <ul class="list-group list-group-flush">
@@ -32,9 +32,9 @@ const generateEngineerCard = (engineer) => {
 
 const generateInternCard = (intern) => {
     return `
-    <div class="card" style="width: 18rem;">
+    <div class="card text-white bg-success mb-3" style="width: 18rem;">
     <div class="card-body">
-      <h class="card-title">${intern.getName()}</h5>
+      <h class="card-title"><strong>${intern.getName()}</strong></h5>
       <p class="card-text"><i class="fa-solid fa-user-graduate"></i>${intern.getRole()}</p>
     </div>
     <ul class="list-group list-group-flush">
