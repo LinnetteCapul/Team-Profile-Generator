@@ -6,6 +6,9 @@ const Manager = require("./lib/manager")
 const Engineer = require("./lib/engineer")
 const Intern = require("./lib/intern")
 
+const {generateManagerCard, generateEngineerCard, generateInternCard, baseHtml} = require("./src/htmlGen")
+
+
 const teamMemberHtmlArr = [];
 
 function init() {
@@ -17,14 +20,14 @@ function init() {
                  message: 'What is the Manager name?',
                 },
                 {
-                 type: 'input',
-                 name: 'email',
-                 message: 'What is the Manager email?',
+                type: 'input',
+                name: 'id',
+                message: 'What is the Manager id?',
                 },
                 {
                  type: 'input',
-                 name: 'id',
-                 message: 'What is the Manager id?',
+                 name: 'email',
+                 message: 'What is the Manager email?',
                 },
                 {
                  type: 'input',
@@ -54,7 +57,7 @@ function init() {
                     case "Intern":
                         return internCreate();
                     default:
-                        return generateHtml;
+                        return generateHtml();
                 }
 
             })
@@ -118,11 +121,11 @@ function init() {
         });
     }
     function generateHtml() {
-        fs.writeFile("index.html", baseHtml(teamMemberHtmlArr), (err) => {
+        fs.writeFile("./dist/index.html", baseHtml(teamMemberHtmlArr), (err) => {
             err ? console.log(err) : console.log("Generated HTML file!")
         })
     }
 
-    managerCreate()
+    managerCreate();
 }
-init()
+init();
