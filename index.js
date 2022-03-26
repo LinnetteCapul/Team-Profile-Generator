@@ -20,14 +20,14 @@ function init() {
                  message: 'What is the Manager name?',
                 },
                 {
-                 type: 'input',
-                 name: 'email',
-                 message: 'What is the Manager email?',
+                type: 'input',
+                name: 'id',
+                message: 'What is the Manager id?',
                 },
                 {
                  type: 'input',
-                 name: 'id',
-                 message: 'What is the Manager id?',
+                 name: 'email',
+                 message: 'What is the Manager email?',
                 },
                 {
                  type: 'input',
@@ -57,7 +57,7 @@ function init() {
                     case "Intern":
                         return internCreate();
                     default:
-                        return generateHtml;
+                        return generateHtml();
                 }
 
             })
