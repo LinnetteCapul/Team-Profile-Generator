@@ -37,17 +37,19 @@ Tests for each class: employee, engineer, intern, and manager are provided.
 
 ## Screenshots
 
-![team-profile-generator-screenshot01]()
+![team-profile-generator-screenshot01](https://raw.githubusercontent.com/LinnetteCapul/Team-Profile-Generator/develop/images/team-profile-generator-screenshot01.jpg)
 Demonstration of Team Profile Generator application being deployed in terminal and the ability for user to input the corresponding info about employee.
+
 <br>
 
-![team-profile-generator-screenshot02]()
+![team-profile-generator-screenshot02](https://raw.githubusercontent.com/LinnetteCapul/Team-Profile-Generator/develop/images/team-profile-generator-screenshot02.jpg)
 User responses generated into index.html file based on prompt questions and user input.
 
 <br>
 
-![team-profile-generator-screenshot03]()
+![team-profile-generator-screenshot03](https://raw.githubusercontent.com/LinnetteCapul/Team-Profile-Generator/develop/images/team-profile-generator-screenshot03.JPG)
 Generated html of team profile deployed in web browser with user responses.
+
 <br>
 
 ## Questions
